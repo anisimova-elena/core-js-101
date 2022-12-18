@@ -286,7 +286,6 @@ function propagateItemsByPositionIndex(arr) {
 }
 
 
-
 /**
  * Returns the 3 largest numbers from the specified array
  *
@@ -300,8 +299,11 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
-function get3TopItems(/* arr */) {
-  throw new Error('Not implemented');
+function compareNumbers(a, b) {
+  return b - a;
+}
+function get3TopItems(arr) {
+  return arr.sort(compareNumbers).slice(0, 3);
 }
 
 
